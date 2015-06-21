@@ -1,0 +1,29 @@
+Description of Variables in the cleaned data "tidyData"
+ 
+ Originally, the combined training and test data set has 563 variables and over 10,000 (10299) observations.
+ After cleaning and extracting the required variables, it has a condensed form of 88 Variables and 180 observations. 
+ 
+1. The 88 Variables are:
+    Columns No 1 though 86 are mean and standard deviations of various movements the subjects performed.
+    Column No 87 called "Activity" : Six different activities (Laying, Sitting, Walking, Walking_Downstairs, Walking_Upstairs)
+    Column No 88 called "Subject" : the identification number 1 through 30 of the test subjects
+	
+2. The raw data was:
+
+    "X_test.txt", "y_test.txt", "subject_test.txt" (feature vectors, activities, id) describes the measurements, features, and subject id of the test set.
+    "X_train.txt", "y_train.txt", "subject_train.txt" (feature vectors, activities, id) describes the measurements, features, and subject id of the training set.
+    The subject id, measurements, and activity features of the test and training set were first combined using rbind;
+	The complete dataset was formed using cbind of the rbind subject id, measurement, and activity feature data.
+	
+3.	Then, measurements on the mean and standard deviation for each measurement were extracted from the complete dataset. 
+	Descriptive activity names were applied to the activities in the condensed data set
+	More readable descriptive variable names were applied to the 86 mean and std variables.
+	
+4.	Use the write.table() command to convert the cleaned data into an independent dataset in text file ("Tidy.txt").
+	
+Data source
+
+Full description and original source of the raw data:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+To download:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
